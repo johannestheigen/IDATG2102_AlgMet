@@ -8,4 +8,6 @@ add_executable(IDATG2102_AlgMet
         BinaryTreeTraversal.cpp
         BinaryTreeAnalyzer.cpp
         Vector.cpp
-        mandatory_assignments/oblig_2/BinaryTreeComparer.cpp)
+        mandatory_assignments/oblig_2/BinaryTreeComparer.cpp
+        grid.cpp
+)
