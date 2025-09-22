@@ -10,5 +10,5 @@ add_executable(IDATG2102_AlgMet
         Vector.cpp
         mandatory_assignments/oblig_2/BinaryTreeComparer.cpp
         grid.cpp
-        BianryTreeAnalyzerTwo.cpp
+        BinaryTreeAnalyzerTwo.cpp
 )
