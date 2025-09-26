@@ -12,4 +12,6 @@ add_executable(IDATG2102_AlgMet
         grid.cpp
         BinaryTreeAnalyzerTwo.cpp
         TreeCaseThree.cpp
+        ThreeCaseFour.cpp
+        LegalPermutationCase.cpp
 )
