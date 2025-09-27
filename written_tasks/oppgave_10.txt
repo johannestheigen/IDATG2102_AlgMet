@@ -1,0 +1,93 @@
+a) Hvilken av metodene Selection sort og Insertion sort er raskest for en array som allerede
+   er ferdig sortert?
+
+Insertion sort er raskest for en array som allerede er ferdig sortert.
+Den er nærmest lineær i slike tilfeller, fordi while-løkka for hvert element
+kjøres null eller svært få ganger. Algoritmen flytter elementene ett for ett,
+og når rekkefølgen allerede stemmer, blir det svært lite arbeid.
+
+Selection sort derimot gjør alltid omtrent (n*n)/2 sammenligninger (n^2/2),
+altså O(n^2), uavhengig av rekkefølgen på elementene. For hvert element
+må den lete gjennom hele den usorterte delen av arrayen for å finne
+det neste minste elementet.
+
+
+b) Hvilken av metodene Selection sort og Insertion sort er raskest for en array som
+   er baklengs sortert?
+
+For en baklengs sortert array er Selection sort raskere enn Insertion sort.
+Dette skyldes at Selection sort alltid leter gjennom hele den usorterte delen
+av arrayen for å finne det minste elementet, og gjør deretter kun ett bytte
+per iterasjon.
+
+Insertion sort derimot må flytte hvert nytt element helt tilbake til starten
+av den sorterte delen. Dermed må alle elementene flyttes for hvert steg,
+noe som gir mange sammenligninger og ombyttinger underveis.
+
+Eksempel:
+
+La en array = [8,7,6,5,4,3,2,1]
+
+Med selection sort:
+
+[5,4,3,2,1]
+[1,4,3,2,5]
+[1,2,3,4,5]
+
+Med Insertion sort:
+
+[-,5,4,3,2,1]
+[-,4,5,3,2,1]
+[-,3,4,5,2,1]
+[-,2,3,4,5,1]
+[-,1,2,3,4,5]
+
+c) Selection sort er ikke stabil (se under «NB» på EKS_21_SelectionSort.cpp).
+ Men hva er Insertion sort og Shellsort?
+
+Eksempel:
+
+Insertion sort:
+
+[-,N,B,B',A,O] (NB! B-ene er like, ' brukes for å sjekke om B-ene bytter plass
+[-,B,N,B',A,O]
+[-,B,B',N,A,O]
+[-,A,B,B',N,O]
+
+Vi ser at B og B' beholder den opprinnelige rekkefølgen sin. Dette viser at
+Insertion sort er en stabil algoritme. Den sammenligner hvert element med
+de foregående, og flytter det kun dersom det er mindre. Dersom elementene er like,
+blir rekkefølgen stående uendret.
+
+Shell sort:
+
+ 0 1  2  3  4 5
+[-,N, B, B',A,O]
+
+h = 3
+ 0 1  2  3  4 5
+[-,B',B, N, A,O]
+
+ 0 1  2  3  4 5
+[-,B',A, N, B,O]
+
+ 0 1  2  3  4 5
+[-,B',A, N, B,O]
+
+h = 1
+ 0 1  2  3  4 5
+[-,A, B',N, B,O]
+
+ 0 1  2  3  4 5
+[-,A, B',N, B,O]
+
+ 0 1  2  3  4 5
+[-,A, B, B',N,O]
+
+ 0 1  2  3  4 5
+[-,A, B, B',N,O]
+
+Vi ser at B og B' bytter den opprinnelige rekkefølgen sin. Dette viser at
+shell sort ikke er en stabil algoritme. Shell sort sammenligner og flytter elementer som
+står langt fra hverandre (med avstand h). Hvis to like elementer havner i forskjellige
+del-arrayer, kan det føre til at de bytter rekkefølge under sorteringen.
