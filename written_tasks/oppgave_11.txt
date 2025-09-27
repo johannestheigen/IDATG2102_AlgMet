@@ -1,0 +1,43 @@
+Shellsort skal utføres på noen bokstaver/keyer. For hver gang indre for-løkke er ferdig
+(dvs. rett etter: a[j] = verdi; ) :
+Skriv/tegn opp arrayen og skriv verdiene til 'h' (4 og 1) og 'i' underveis i sorteringen.
+Marker spesielt de key’ene som har vært involvert i sorteringen.
+
+a) Gjør dette for bokstavene/teksten: SUMPSVAMP
+
+0 1 2 3 4 5 6 7 8 9
+-,s,u,m,p,s,v,a,m,p (h=4, i=5, ingenting skjer)
+-,s,u,m,p,s,v,a,m,p (h=4, i=6, ingenting skjer)
+-,s,u,A,p,s,v,M,m,p (h=4, i=7, A vandrer forbi M)
+-,s,u,a,M,s,v,m,P,p (h=4, i=8, M vandrer forbi P)
+-,P,u,a,m,S,v,m,p,S (h=4, i=9, P vandrer forbi S og S)
+
+-,p,u,a,m,s,v,m,p,s (h=1, i=2, ingenting skjer)
+-,A,P,U,m,s,v,m,p,s (h=1, i=3, A vandrer forbi P og U)
+-,a,M,P,U,s,v,m,p,s (h=1, i=4, M vandrer forbi P og U)
+-,a,m,p,S,U,v,m,p,s (h=1, i=5, S vandrer forbi U)
+-,a,m,p,s,u,v,m,p,s (h=1, i=6, ingenting skjer)
+-,a,m,M,P,S,U,V,"p",s (h=1, i=7, M vandrer for P, S, U og V)
+-,a,m,m,p,P,S,U,V,s (h=1, i=8, P vandrer forbi S, U, og V)
+-,a,m,m,p,p,s,S,U,V (h=1, i=9, S vandrer forbi U, og V)
+
+b) Gjør dette for bokstavene/teksten: KARKINAGRI
+
+0 1 2 3 4 5 6 7 8 9 10
+-,I,a,r,k,K,n,a,g,r,i (h=4, i=5, I vandrer forbi K)
+-,i,a,r,k,k,n,a,g,r,i (h=4, i=6, ingenting skjer)
+-,i,a,A,k,k,n,R,g,r,i (h=4, i=7, A vandrer forbi R)
+-,i,a,a,G,k,n,r,K,r,i (h=4, i=8, G vandrer forbi K)
+-,i,a,a,g,k,I,r,k,r,N (h=4, i=10, I vandrer forbi N)
+
+-,A,I,a,g,k,i,r,k,r,n (h=1, i=2, A vandrer forbi I)
+-,a,A,I,g,k,i,r,k,r,n (h=1, i=3, A vandrer forbi I)
+-,a,a,G,I,k,i,r,k,r,n (h=1, i=4, G vandrer forbi I)
+-,a,a,g,i,k,i,r,k,r,n (h=1, i=5, ingenting skjer)
+-,a,a,g,i,I,K,r,k,r,n (h=1, i=6, I vandrer forbi K)
+-,a,a,g,i,i,k,r,k,r,n (h=1, i=7, ingenting skjer)
+-,a,a,g,i,i,k,K,R,r,n (h=1, i=8, K vandrer forbi R)
+-,a,a,g,i,i,k,k,r,r,n (h=1, i=9, ingenting skjer)
+-,a,a,g,i,i,k,k,N,R,R (h=1, i=10, N vandrer forbi R og R)
+
+
