@@ -45,49 +45,10 @@ Med Insertion sort:
 c) Selection sort er ikke stabil (se under «NB» på EKS_21_SelectionSort.cpp).
  Men hva er Insertion sort og Shellsort?
 
-Eksempel:
-
-Insertion sort:
-
-[-,N,B,B',A,O] (NB! B-ene er like, ' brukes for å sjekke om B-ene bytter plass
-[-,B,N,B',A,O]
-[-,B,B',N,A,O]
-[-,A,B,B',N,O]
-
-Vi ser at B og B' beholder den opprinnelige rekkefølgen sin. Dette viser at
 Insertion sort er en stabil algoritme. Den sammenligner hvert element med
 de foregående, og flytter det kun dersom det er mindre. Dersom elementene er like,
 blir rekkefølgen stående uendret.
 
-Shell sort:
-
- 0 1  2  3  4 5
-[-,N, B, B',A,O]
-
-h = 3
- 0 1  2  3  4 5
-[-,B',B, N, A,O]
-
- 0 1  2  3  4 5
-[-,B',A, N, B,O]
-
- 0 1  2  3  4 5
-[-,B',A, N, B,O]
-
-h = 1
- 0 1  2  3  4 5
-[-,A, B',N, B,O]
-
- 0 1  2  3  4 5
-[-,A, B',N, B,O]
-
- 0 1  2  3  4 5
-[-,A, B, B',N,O]
-
- 0 1  2  3  4 5
-[-,A, B, B',N,O]
-
-Vi ser at B og B' bytter den opprinnelige rekkefølgen sin. Dette viser at
-shell sort ikke er en stabil algoritme. Shell sort sammenligner og flytter elementer som
+Shell sort sammenligner og flytter elementer som
 står langt fra hverandre (med avstand h). Hvis to like elementer havner i forskjellige
 del-arrayer, kan det føre til at de bytter rekkefølge under sorteringen.
