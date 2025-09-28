@@ -1,0 +1,41 @@
+Quicksort skal utføres på noen bokstaver/keyer.
+Lag en oversikt/tabell der du for hver rekursive sortering skriver de involverte
+bokstavene og markerer/uthever hva som er partisjonselementet.
+
+a) Gjør dette for bokstavene/teksten: PIEMONTE
+
+
+1 2 3 4 5 6 7 8
+P I E M O N T E
+e E p m o n t I
+    I m o n t P
+      m o n P t
+      m N O
+E E I M N O P T
+
+
+
+b) Gjør dette for bokstavene/teksten: PROSEDYRE
+
+1 2 3 4 5 6 7 8 9
+P R O S E D Y R E
+d e E s r p y r o
+d E
+      O r p y r s
+        r p r S y
+        p R r
+D E E O P R R S Y
+
+
+c) Gjør dette for bokstavene/teksten: LIGAMESTER
+
+1 2 3 4 5 6 7 8 9 10
+L I G A M E S T E R
+l i g a m e e R s t
+e a E i m l g
+A e
+      G m l i
+        I l m
+          l M
+                s T
+A E E G I L M R S T
