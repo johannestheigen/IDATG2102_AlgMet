@@ -14,4 +14,5 @@ add_executable(IDATG2102_AlgMet
         TreeCaseThree.cpp
         ThreeCaseFour.cpp
         LegalPermutationCase.cpp
+        heap.cpp
 )
