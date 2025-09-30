@@ -1,0 +1,170 @@
+Oppgave 14
+
+a) Følgende heap er gitt: 98 87 72 49 73 70 70 45 40 46 42 31 39
+
+Utfør etter tur følgende operasjoner på denne heap: insert(87), insert(86), remove(),
+remove() og replace(24). Skriv opp heapen etter at hver av operasjonene er utført.
+
+NB: For hver av operasjonene skal du operere videre på den heapen som ble
+resultatet av den forrige operasjonen.
+
+Heap før: 98 87 72 49 73 70 70 45 40 46 42 31 39
+
+Initielt "heap tre":
+
+            98
+         /      \
+        /        \
+       87        72
+      /  \      /  \
+    49   73    70  70
+   /  \ /  \  /  \
+ 45  40 46 42 31 39
+
+insert(87):
+
+            98
+         /      \
+        /        \
+       87         87
+      /  \      /    \
+    49   73    70     72
+   /  \ /  \  /  \    /
+ 45  40 46 42 31 39 70
+
+Heap etter: 98 87 87 49 73 70 72 45 40 46 42 31 39 70
+
+
+insert(86):
+
+            98
+         /      \
+        /        \
+       87         87
+      /  \      /    \
+    49   73    70     86
+   /  \ /  \  /  \    / \
+ 45  40 46 42 31 39 70   72
+
+Heap etter: 98 87 87 49 73 70 86 45 40 46 42 31 39 70 72
+
+Remove():
+
+            87
+         /      \
+        /        \
+       73         87
+      /  \      /    \
+    49   72    70     86
+   /  \ /  \  /  \    / \
+ 45  40 46 42 31 39 70
+
+Heap etter: 87 73 87 49 72 70 86 45 40 46 42 31 39 70
+
+remove():
+
+            87
+         /      \
+        /        \
+       73         86
+      /  \      /    \
+    49   72    70    70
+   /  \ /  \  /  \
+ 45  40 46 42 31 39
+
+Heap etter: 87 73 86 49 72 70 70 45 40 46 42 31 39
+
+replace(24):
+
+            86
+         /      \
+        /        \
+       73         70
+      /  \      /    \
+    49   72    39    70
+   /  \ /  \  /  \
+ 45  40 46 42 31 24
+
+Heap etter: 86 73 70 49 72 39 70 45 40 46 42 31 24
+
+
+b) Gjør det samme med heapen: 74 58 59 52 57 56 58 47 48 49 50 51
+ og operasjonene: insert(57), insert(75), remove(), remove() og replace(50)
+
+ Heap før: 74 58 59 52 57 56 58 47 48 49 50 51
+
+Initielt "heap tre":
+
+             74
+          /      \
+         /        \
+        58        59
+       /  \      /    \
+     52   57    56    58
+    /  \ /  \  /  \
+  47  48 49 50 51
+
+insert(57):
+
+              74
+           /      \
+          /        \
+         58        59
+        /  \      /    \
+      52   57    57    58
+     /  \ /  \  /  \
+   47  48 49 50 51 56
+
+Heap etter: 74 58 59 52 57 57 58 47 48 49 50 51 56
+
+insert(75):
+
+              75
+           /      \
+          /        \
+         58        74
+        /  \      /    \
+      52   57    57     59
+     /  \ /  \  /  \   /
+   47  48 49 50 51 56 58
+
+Heap etter: 75 58 74 52 57 57 59 47 48 49 50 51 56 58
+
+remove():
+
+              74
+           /      \
+          /        \
+         58        59
+        /  \      /    \
+      52   57    57     58
+     /  \ /  \  /  \
+   47  48 49 50 51 56
+
+Heap etter: 74 58 59 52 57 57 58 47 48 49 50 51 56
+
+remove():
+
+              59
+           /      \
+          /        \
+         58        58
+        /  \      /   \
+      52   57    57    56
+     /  \ /  \  /
+   47  48 49 50 51
+
+Heap etter: 59 58 58 52 57 57 56 47 48 49 50 51
+
+replace(50):
+
+              58
+           /      \
+          /        \
+         57        58
+        /  \      /   \
+      52   50    57    56
+     /  \ /  \  /
+   47  48 49 50 51
+
+Heap etter: 58 57 58 52 50 57 56 47 48 49 50 51
