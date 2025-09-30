@@ -1,0 +1,29 @@
+Skriv den resulterende arrayen når key’er legges (fra venstre mot høyre) inn i en heap.
+
+a) Gjør dette for bokstavene/teksten: EDINBURGH
+
+"Heap-treet":
+
+      U
+     / \
+    I   R
+   / \ / \
+  H  B E  N
+ / \
+D   G
+
+Resulterende array: U I R H B E N D G
+
+b) Gjør dette for bokstavene/teksten: KARAVOSTAMO
+
+"Heap-treet":
+
+      V
+     / \
+    T   S
+   / \ / \
+  R  O K  O
+ / \ / \
+A  A A  M
+
+Resulterende array: V T S R O K O A A A M
