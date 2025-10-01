@@ -1,0 +1,62 @@
+Heapsort (vha. bottom-up heap konstruksjon) skal utføres på noen bokstaver/keyer.
+Skriv/tegn opp heapens innhold etterhvert som heapen konstrueres og deretter sorteres.
+
+a) Gjør dette for bokstavene/teksten: KNATTHOLMEN
+
+Bottom Up Heap-konstruksjon:
+
+1 2 3 4 5 6 7 8 9 10 11
+K N A T T H O L M  E  N
+        t          e  n
+      t       l m
+    O     h A
+  T   N t     l m
+T T o n N          e  K
+
+Dvs: t t o n n h a l m e k
+
+Heap sortering:
+
+1 2 3 4 5 6 7 8 9 10 11
+T N o M n h a l K  e  T
+O n H m n E a l k  T  t
+N N h m K e a l O  t  t
+N M h L k e a N o  t  t
+M L h A k e N n o  t  t
+L K h a E M n n o  t  t
+K E h a L m n n o  t  t
+H e A K l m n n o  t  t
+E A H k l m n n o  t  t
+A E h k l m n n o  t  t
+
+Svar: A E H K L M N O T T
+
+b) Gjør dette for bokstavene/teksten: GDANSKSOPOT
+
+Bottom Up Heap-konstruksjon:
+
+1 2 3 4 5 6 7 8 9 10 11
+G D A N S K S O P  O  T
+        T          o  S
+      P       o N
+    S     k A
+  T   p S          o  D
+T S s p O          G  d
+
+Dvs: t s s p o k a o n g d
+
+Heap sortering:
+
+1 2 3 4 5 6 7 8 9 10 11
+S P s O o k a D n  g  T
+S p K o o G a d n  S  t
+P O k N o g a d S  s  t
+O O k n D g a P s  s  t
+O N k A d g O p s  s  t
+N G k a d O o p s  s  t
+K g D a N o o p s  s  t
+G A d K n o o p s  s  t
+D a G k n o o p s  s  t
+A D g k n o o p s  s  t
+
+Svar: A D G K N O O P S S T
