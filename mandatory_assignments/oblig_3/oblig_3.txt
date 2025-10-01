@@ -1,0 +1,154 @@
+Oppgave 1:
+
+Shellsort skal utføres på bokstavene/keyene «V I K I N G S K I P» (blanke ignoreres).
+For hver gang indre for-løkke er ferdig (dvs. rett etter: a[j] = verdi; ) :
+Tegn opp arrayen og skriv verdiene til 'h' (4 og 1) og 'i' underveis i sorteringen.
+Marker spesielt de key’ene som har vært involvert i sorteringen
+
+N i k i V g s k i  p (h=4 i=5, N vandrer forbi V)
+n G k i v I s k i  p (h=4 i=6, G vandrer forbi I)
+n g k i v i s k i  p (h=4 i=7, ingenting skjer)
+n g k i v i s k i  p (h=4 i=8, ingenting skjer)
+I g k i N i s k V  p (h=4 i=9, I vandrer forbi N og V)
+i g k i n i s k v  p (h=4 i=10, ingenting skjer)
+G I k i n i s k v  p (h=1 i=2, G Vandrer forbi I)
+g i k i n i s k v  p (h=1 i=3, ingenting skjer)
+g i I K n i s k v  p (h=1 i=4, I vandrer forbi K)
+g i I K n i s k v  p (h=1 i=5, ingenting skjer)
+g i i I K N s k v  p (h=1 i=6, I vandrer forbi K og N)
+g i i i k n s k v  p (h=1 i=7, ingenting skjer)
+g i i i k K N S v  p (h=1 i=8, K vandrer forbi N og S)
+g i i i k k n P S  V (h=1 i=9, P vandrer forbi S og V)
+
+Ferdig sortert: G I I I K K N P S V
+
+Oppgave 2:
+
+Quicksort skal utføres på bokstavene/keyene «O V E R L E V E L S E» (blanke ignoreres).
+Lag en oversikt/tabell der du for hver rekursive sortering skriver de involverte
+bokstavene og markerer/uthever hva som er partisjonselementet.
+
+1 2 3 4 5 6 7 8 9 10 11
+O V E R L E V E L  S  E
+e e E r l v v o l  s  e
+E e
+      E l v v o l  s  r
+        l l o R v  s  v
+        l l O
+        L l
+                s  V  v
+E E E E L L O R S  V  V
+
+
+Oppgave 3:
+
+Følgende heap er gitt: 69 56 47 37 32 41 36 20 15 25 22 23
+
+Utfør etter tur følgende operasjoner på denne heap: insert(46), insert(63), remove(),
+replace(35) og replace(38). Skriv opp heapen etter at hver av operasjonene er utført.
+NB: For hver av operasjonene skal du operere videre på den heapen som ble
+resultatet av den forrige operasjonen.
+
+
+Initielt "heap tre":
+
+                    69
+               /         \
+             56            47
+          /     \         /  \
+        37      32      41    36
+       /  \    /  \    /
+     20   15  25  22  23
+
+insert(46):
+
+                   69
+               /         \
+             56            47
+          /     \         /  \
+        37      32      46    36
+       /  \    /  \    /  \
+     20   15  25  22  23   41
+
+Heap etter: 69 56 47 37 32 46 36 20 15 25 22 23 41
+
+insert(63):
+
+                     69
+               /            \
+             56              63
+          /     \         /      \
+        37      32      46        47
+       /  \    /  \    /  \      /
+     20   15  25  22  23   41  36
+
+Heap etter: 69 56 63 37 32 46 47 20 15 25 22 23 41 36
+
+remove():
+
+                    63
+               /          \
+             56             47
+          /     \         /    \
+        37      32      46      36
+       /  \    /  \    /  \
+     20   15  25  22  23   41
+
+Heap etter: 63 56 47 37 32 46 36 20 15 25 22 23 41
+
+replace(35):
+
+                    56
+               /          \
+             37             47
+          /     \         /    \
+        35      32      46      36
+       /  \    /  \    /  \
+     20   15  25  22  23   41
+
+Heap etter: 56 37 47 35 32 46 36 20 15 25 22 23 41
+
+replace(38):
+
+                    47
+               /          \
+             37             46
+          /     \         /    \
+        35      32      41      36
+       /  \    /  \    /  \
+     20   15  25  22  23   38
+
+Heap etter: 47 37 46 35 32 41 36 20 15 25 22 23 38
+
+Oppgave 4:
+
+Heapsort (vha. bottom-up heap konstruksjon) skal utføres på bokstavene «UTFORSKNING».
+Tegn opp heapens innhold etterhvert som heapen konstrueres og deretter sorteres.
+
+Bottom Up Heap-konstruksjon:
+
+1 2 3 4 5 6 7 8 9 10 11
+U T F O R S K N I  N  G
+        r          n  g
+      o       n i
+    S     F k
+  t   o r     n i
+u t s o r          n  g
+
+u t s o r f k n i n g
+
+Heap sortering:
+
+1 2 3 4 5 6 7 8 9 10 11
+T R s o N f k n i  G  U
+S r N o I f k n G  T  u
+R O n N i f k G S  t  u
+O N n G i f k R s  t  u
+N n K g i f O r s  t  u
+N k F g i N o r s  t  u
+K I f g N n o r s  t  u
+I G f K n n o r s  t  u
+G F I k n n o r s  t  u
+F G i k n n o r s  t  u
+
+Svar: F G I K N N O R S T U
