@@ -1,0 +1,25 @@
+Skriv/tegn den resulterende datastruktur når bokstaver settes inn i et binært søketre:
+
+a) Gjør dette for bokstavene/teksten: EDINBURGH
+
+                    E
+                  /   \
+                 D     I
+                 /    /  \
+                B    G     N
+                      \     \
+                       H     U
+                            /
+                           R
+
+b) Gjør dette for bokstavene/teksten: KARAVOSTAMO
+
+                  K
+               /     \
+             A         R
+             \        / \
+              A     O    V
+               \   / \  /
+                A M  O S
+                          \
+                           T
