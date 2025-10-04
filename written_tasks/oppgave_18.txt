@@ -1,0 +1,126 @@
+Det skal fjernes («remove») noen noder fra et binært søktre.
+
+Skriv/tegn opp treet for hver gang, og fortell hvilken av «if ..... else if ..... else»-grenene
+i koden (dvs. Case 1, Case 2, Case 3) som er aktuelle når det etter tur fjernes ulike
+bokstaver.
+
+NB: For hver fjerning skal det på nytt ta utgangspunkt i hele det aktuelle treet.
+Dvs. på intet tidspunkt skal det fra treet være fjernet mer enn en bokstav.
+
+a) Fjern etter tur fra treet bokstavene: ‘H’, ‘F’ og ‘T’
+
+Initielt binært søketre:
+
+                          M
+                     /         \
+                    F            Q
+                  /   \        /   \
+                 C      I     O     T
+                / \    / \   / \   / \
+               A   E  H   K N   P S   U
+                     /   / \     /     \
+                    G   J   L   R       V
+
+Binært søketre etter 'H' blir fjernet:
+
+                          M
+                     /         \
+                    F            Q
+                  /   \        /   \
+                 C      I     O     T
+                / \    / \   / \   / \
+               A   E      K N   P S   U
+                         / \     /     \
+                        J   L   R       V
+
+Dette er CASE 1 fordi 'H' har ingen høyre barn.
+
+Binært søketre etter 'F' blir fjernet:
+
+                          M
+                     /         \
+                    G            Q
+                  /   \        /   \
+                 C      I     O     T
+                / \    / \   / \   / \
+               A   E      K N   P S   U
+                         / \     /     \
+                        J   L   R       V
+
+Dette er CASE 3 fordi 'F' både venste og høyre barn, og må
+lete mer etter sekvensiell etterfølger helt til venstre.
+
+Binært søketre etter 'T' blir fjernet:
+
+                          M
+                     /         \
+                    G            Q
+                  /   \        /   \
+                 C      I     O     U
+                / \    / \   / \   / \
+               A   E      K N   P S   V
+                         / \     /
+                        J   L   R
+
+Dette er CASE 2 fordi 'T' har et høyre barn uten sitt venstre barn.
+
+b) Fjern etter tur fra treet bokstavene: ‘C’, ‘T’ og ‘L’
+
+Initielt binært søketre:
+
+
+                        L
+                 /            \
+                F              Q
+              /   \          /   \
+            C       I       O     T
+           / \    /   \    / \   /
+          A   D  G     K  N   P R
+           \   \  \   /  /       \
+            B   E  H J  M         S
+
+Binært søketre etter 'C' blir fjernet:
+
+
+                        L
+                 /            \
+                F              Q
+              /   \          /   \
+            D       I       O     T
+           / \    /   \    / \   /
+          A   E  G     K  N   P R
+           \      \   /  /       \
+            B      H J  M         S
+
+Dette er CASE 2 fordi 'C' har et høyre barn uten sitt venstre barn.
+
+Binært søketre etter 'T' blir fjernet:
+
+
+                        L
+                 /            \
+                F              Q
+              /   \          /   \
+            D       I       O     R
+           / \    /   \    / \     \
+          A   E  G     K  N   P     S
+           \      \   /  /
+            B      H J  M
+
+Dette er CASE 1 fordi 'T' har ingen høyre barn.
+
+Binært søketre etter 'L' blir fjernet:
+
+
+                        M
+                 /            \
+                F              Q
+              /   \          /   \
+            D       I       O     R
+           / \    /   \    / \     \
+          A   E  G     K  N   P     S
+           \      \   /
+            B      H J
+
+Dette er CASE 3 fordi 'L' både venste og høyre barn, og må
+lete mer etter sekvensiell etterfølger helt til venstre.
