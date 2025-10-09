@@ -5,9 +5,9 @@ Skriv også opp arrayen hver gang bokstaver legges inn i den vha. linear probing
 
 a) Gjør dette for bokstavene: RØDBILLESUPPE og X = 13
 
-Keyer:       R  Ø  D  B  I  L  L  E  S  U  P  P  E
-K-verdi:     18 28 4  2  9  12 12 5  19 21 16 16 5
-Hash(X=13):   5  2 4  2  9  12 12 5   6  8  3  3 5
+Keyer:      R  Ø  D  B  I  L  L  E  S  U  P  P  E
+K-verdi:    18 28 4  2  9  12 12 5  19 21 16 16 5
+Hash1(k):   5  2  4  2  9  12 12 5  6  8  3  3  5
 
              0  1  2  3  4  5  6  7  8  9  10 11 12
              -  -  -  -  -  R  -  -  -  -  -  -  -
@@ -30,7 +30,7 @@ b) Gjør dette for bokstavene: EMIRATESSTADIUM og X = 17
 
 Keyer:      E  M  I  R  A  T  E  S  S  T  A  D  I  U  M
 K-verdi:    5  13 9  18 1  20 5  19 19 20 1  4  9  21 13
-Hash(X=17): 5  13 9  1  1  3  5  2  2  3  1  4  9  4  13
+Hash1(k):   5  13 9  1  1  3  5  2  2  3  1  4  9  4  13
 
             0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16
             -  -  -  -  -  E  -  -  -  -  -  -  -  -  -  -  -
