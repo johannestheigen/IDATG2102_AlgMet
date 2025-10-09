@@ -1,0 +1,48 @@
+Se EKS_29_Hashing.cpp. Vi lar hash-funksjonene være: hash1(k) = k mod X
+og hash2(k) = 4 – (k % 4) der k står for bokstavens nummer i alfabetet (1-29).
+Vi har også en array med indeksene 0 til X-1.
+Skriv hver enkelt bokstav sin k-verdi og returverdi fra både hash1 og hash2.
+Skriv også opp arrayen hver gang en bokstav legges inn i den vha. double hashing.
+
+a) Gjør dette for bokstavene: GDANSKSOPOT og X = 13
+
+Keyer:   G  D  A  N  S  K  S  O  P  O  T
+K-verdi: 7  4  1  14 19 11 19 15 16 15 20
+Hash1(k) 7  4  1  1  6  11 6  2  3  2  7
+Hash2:   1  4  3  2  1  1  1  1  4  1  4
+
+         0  1  2  3   4  5  6  7  8   9  10 11 12
+         -  -  -  -   -  -  -  G  -   -  -   -  -
+         -  -  -  -   D  -  -  G  -   -  -   -  -
+         -  A  -  -   D  -  -  G  -   -  -   -  -
+         -  A  -  N*  D  -  -  G  -   -  -   -  -
+         -  A  -  N*  D  -  S  G  -   -  -   -  -
+         -  A  -  N*  D  -  S  G  -   -  -   K  -
+         -  A  -  N*  D  -  S  G  S*  -  -   K  -
+         -  A  O  N*  D  -  S  G  S*  -  -   K  -
+         -  A  O  N*  D  -  S  G  S*  -  P*  K  -
+         -  A  O  N*  D  O* S  G  S*  T* P*  K  -
+
+Resultat etter doobel hashing: -  A  O  N*  D  O* S  G  S*  T* P*  K  -
+
+b) Gjør dette for bokstavene: KNATTHOLMEN og X = 13
+
+Keyer:    K  N  A  T  T  H  O  L  M  E  N
+K-verdi:  11 14 1  20 20 8  15 12 13 5  14
+Hash1(k): 11 1  1  7  7  8  2  12 0  5  1
+Hash2:    1  2  3  4  4  4  1  4  3  3  2
+
+          0  1  2  3  4  5  6  7  8  9  10  11 12
+          -  -  -   -   -   -  -  -  -  -   -  K  -
+          -  N  -   -   -   -  -  -  -  -   -  K  -
+          -  N  -   -   A*  -  -  -  -  -   -  K  -
+          -  N  -   -   A*  -  -  T  -  -   -  K  -
+          -  N  T*  -   A*  -  -  T  -  -   -  K  -
+          -  N  T*  -   A*  -  -  T  H  -   -  K  -
+          -  N  T*  O*  A*  -  -  T  H  -   -  K  -
+          -  N  T*  O*  A*  -  -  T  H  -   -  K  L
+          M  N  T*  O*  A*  -  -  T  H  -   -  K  L
+          M  N  T*  O*  A*  E  -  T  H  -   -  K  L
+          M  N  T*  O*  A*  E  -  T  H  N*  -  K  L
+
+Resultat etter dobbel hashing:  M  N  T*  O*  A*  E  -  T  H  N*  -  K  L
