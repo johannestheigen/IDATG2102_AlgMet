@@ -1,0 +1,52 @@
+Se EKS_29_Hashing.cpp. Vi lar hash-funksjonen være: hash1(k) = k mod X
+der k står for bokstavens nummer i alfabetet (1-29). Vi har også en array med indeksene
+0 til X-1. Skriv hver enkelt bokstav sin returverdi fra hash1.
+Skriv også opp arrayen hver gang bokstaver legges inn i den vha. linear probing.
+
+a) Gjør dette for bokstavene: RØDBILLESUPPE og X = 13
+
+Keyer:       R  Ø  D  B  I  L  L  E  S  U  P  P  E
+K-verdi:     18 28 4  2  9  12 12 5  19 21 16 16 5
+Hash(X=13):   5  2 4  2  9  12 12 5   6  8  3  3 5
+
+             0  1  2  3  4  5  6  7  8  9  10 11 12
+             -  -  -  -  -  R  -  -  -  -  -  -  -
+             -  -  Ø  -  -  R  -  -  -  -  -  -  -
+             -  -  Ø  -  D  R  -  -  -  -  -  -  -
+             -  -  Ø  B  D  R  -  -  -  -  -  -  -
+             -  -  Ø  B  D  R  -  -  -  I  -  -  -
+             -  -  Ø  B  D  R  -  -  -  I  -  -  L
+             L  -  Ø  B  D  R  -  -  -  I  -  -  L
+             L  -  Ø  B  D  R  E  -  -  I  -  -  L
+             L  -  Ø  B  D  R  E  S  -  I  -  -  L
+             L  -  Ø  B  D  R  E  S  U  I  -  -  L
+             L  -  Ø  B  D  R  E  S  U  I  P  -  L
+             L  -  Ø  B  D  R  E  S  U  I  P  P  L
+             L  E  Ø  B  D  R  E  S  U  I  P  P  L
+
+Resultat etter linear probing: L  E  Ø  B  D  R  E  S  U  I  P  P  L
+
+b) Gjør dette for bokstavene: EMIRATESSTADIUM og X = 17
+
+Keyer:      E  M  I  R  A  T  E  S  S  T  A  D  I  U  M
+K-verdi:    5  13 9  18 1  20 5  19 19 20 1  4  9  21 13
+Hash(X=17): 5  13 9  1  1  3  5  2  2  3  1  4  9  4  13
+
+            0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16
+            -  -  -  -  -  E  -  -  -  -  -  -  -  -  -  -  -
+            -  -  -  -  -  E  -  -  -  -  -  -  -  M  -  -  -
+            -  -  -  -  -  E  -  -  -  I  -  -  -  M  -  -  -
+            -  R  -  -  -  E  -  -  -  I  -  -  -  M  -  -  -
+            -  R  A  -  -  E  -  -  -  I  -  -  -  M  -  -  -
+            -  R  A  T  -  E  -  -  -  I  -  -  -  M  -  -  -
+            -  R  A  T  -  E  E  -  -  I  -  -  -  M  -  -  -
+            -  R  A  T  S  E  E  -  -  I  -  -  -  M  -  -  -
+            -  R  A  T  S  E  E  S  -  I  -  -  -  M  -  -  -
+            -  R  A  T  S  E  E  S  T  I  -  -  -  M  -  -  -
+            -  R  A  T  S  E  E  S  T  I  A  -  -  M  -  -  -
+            -  R  A  T  S  E  E  S  T  I  A  D  -  M  -  -  -
+            -  R  A  T  S  E  E  S  T  I  A  D  I  M  -  -  -
+            -  R  A  T  S  E  E  S  T  I  A  D  I  M  U  -  -
+            -  R  A  T  S  E  E  S  T  I  A  D  I  M  U  M  -
+
+Resultat etter linear probing: -  R  A  T  S  E  E  S  T  I  A  D  I  M  U  M  -
