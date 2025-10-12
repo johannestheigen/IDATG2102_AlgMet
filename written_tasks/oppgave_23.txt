@@ -1,0 +1,48 @@
+Vi har grafen:
+
+   C
+  /  \
+ B --- G --- D
+  \     \  /  \
+   A ---- F    E
+
+a) Skriv opp nabomatrisen.
+
+  |A B C D E F G
+--|-------------
+ A|0 1 0 0 0 1 0
+ B|1 0 1 0 0 0 1
+ C|0 1 0 0 0 0 1
+ D|0 0 0 0 1 1 1
+ E|0 0 0 1 0 0 0
+ F|1 0 0 1 0 0 1
+ G|0 1 1 1 0 1 0
+
+b) Skriv/tegn dybde-først-søketreet, ved bruk av nabomatrisen og når koden DFS(…)
+ i EKS_30_DFS_BFS.cpp brukes/kjører, og vi starter i node A.
+
+          A.....
+          |    :
+      ....B    :
+      :   |    :
+      :   C    :
+      :   |    :
+      ....G... :
+          |  : :
+          D  : :
+         / \ : :
+        E   F..:
+
+c) Skriv/tegn dybde-først søketreet når vi i stedet starter i node D
+
+         D......
+        / \    :
+       E   F.. :
+           | : :
+           A : :
+           | : :
+       ....B : :
+       :   | : :
+       :   C : :
+       :   | : :
+       ....G....
