@@ -5,7 +5,7 @@
  * using a variety of different recursive functions.
  * The following functions include:
  *
- * buildTree() -> Builds a binary tree.
+ * byggTre() -> Builds a binary tree.
  * count() -> Counts all nodes.
  * countNullptrNodes() -> Counts all nullpointers.
  * countCompleteNodes -> Counts every nodes with two children.
@@ -34,7 +34,7 @@ struct Node {
     }
 };
 
-Node *buildTree();
+Node *byggTre();
 
 
 int gLevel = -1; // The initial value of gLevel set to -1 since the root level is defined as 0.
@@ -48,7 +48,7 @@ int completeNodeCounter = 0;
  *
  *  @return   Pointer to the root of the built tree
  */
-Node *buildTree() {
+Node *byggTre() {
     /*   Builds the tree:                                     A
                                                   /                 \
                                              B                          C
@@ -155,7 +155,7 @@ int findHeight(const Node *root) {
  * @return 0 to indicate that the program has successfully been executed
  */
 int main() {
-    Node *root = buildTree();
+    Node *root = byggTre();
 
     cout << "\n";
 

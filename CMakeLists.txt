@@ -15,4 +15,8 @@ add_executable(IDATG2102_AlgMet
         ThreeCaseFour.cpp
         LegalPermutationCase.cpp
         heap.cpp
+        fringe.cpp
+        fringe.h
+        MST.cpp
+        mandatory_assignments/oblig_5/BinaryTree.cpp
 )
