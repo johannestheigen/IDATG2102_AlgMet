@@ -87,6 +87,6 @@ bool writeAllPredecessors(Node *node, int id) {
  */
 int main() {
     Node *root = buildTree();
-    writeAllPredecessors(root, 1);
+    writeAllPredecessors(root, 18);
     return 0;
 }
