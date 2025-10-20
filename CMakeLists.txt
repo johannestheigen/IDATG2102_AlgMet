@@ -19,4 +19,5 @@ add_executable(IDATG2102_AlgMet
         fringe.h
         MST.cpp
         mandatory_assignments/oblig_5/BinaryTree.cpp
+        Graph.cpp
 )
