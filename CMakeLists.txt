@@ -20,4 +20,5 @@ add_executable(IDATG2102_AlgMet
         MST.cpp
         mandatory_assignments/oblig_5/BinaryTree.cpp
         Graph.cpp
+        Sudoku.cpp
 )
