@@ -97,7 +97,7 @@ bool findSolution(const int n) {
             }
         }
 
-        int startRow = (i / 3) * 3, startCol = (j / 3) * 3; // Find the top-left corner of the 3x3 subgrid for the current cell.
+        int startRow = (i / 3) * 3, startCol = (j / 3) * 3; // Calculates the top-left corner of the 3x3 subgrid for the current cell.
         for (int r = startRow; r < startRow + 3; r++) {
             for (int c = startCol; c < startCol + 3; c++) {
                 if (sudokuGrid[r][c] == value) {
