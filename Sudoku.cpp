@@ -111,7 +111,7 @@ bool findSolution(const int n) {
             if (findSolution(n + 1)) {
                 return true; // A complete solution was found after assigning this value.
             }
-            sudokuGrid[i][j] = 0; // Reset the cell to empty to explore other possible values (backtracking).
+            sudokuGrid[i][j] = 0; // Reset the cell to empty to check other possible values (backtracking).
         }
     }
     return false;
