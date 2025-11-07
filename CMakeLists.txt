@@ -21,4 +21,5 @@ add_executable(IDATG2102_AlgMet
         mandatory_assignments/oblig_5/BinaryTree.cpp
         Graph.cpp
         Sudoku.cpp
+        perfect_number.cpp
 )
